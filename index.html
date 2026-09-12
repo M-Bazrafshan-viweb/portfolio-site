@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مهشید بذرافشان | توسعه‌دهنده فرانت‌اند</title>
+<meta name="description" content="رزومه و نمونه‌کارهای مهشید بذرافشان — توسعه‌دهنده فرانت‌اند، React، TypeScript، Tailwind CSS">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<canvas id="particles"></canvas>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">MB<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about">درباره من</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#projects">نمونه‌کارها</a>
+      <a href="#contact">تماس</a>
+    </div>
+    <a href="assets/resume.pdf" download class="btn btn-sm">رزومه PDF ↓</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-badge reveal">👋 سلام، من مهشید هستم</p>
+      <h1 class="hero-title reveal">
+        <span class="line"><span>توسعه‌دهنده</span></span>
+        <span class="line"><span class="grad">فرانت‌اند</span> <span class="cursor-blink">|</span></span>
+      </h1>
+      <p class="type-wrap reveal"><span id="typewriter"></span></p>
+      <p class="hero-desc reveal">
+        رابط‌های کاربری مدرن، ریسپانسیو و انیمیشن‌دار می‌سازم.
+        با تجربه کار روی پروژه واقعی در حال خدمت و همکاری تیمی از طریق Git & Pull Request.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">دیدن نمونه‌کارها</a>
+        <a href="#contact" class="btn btn-ghost">تماس با من</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="4">۰</span><span class="stat-label">پروژه فعال</span></div>
+        <div class="stat"><span class="stat-num" data-count="3">۰</span><span class="stat-label">PR ادغام‌شده</span></div>
+        <div class="stat"><span class="stat-num" data-count="12000" data-suffix="+">۰</span><span class="stat-label">کاربر نمونه‌کارها</span></div>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <div class="avatar-ring">
+        <div class="avatar-ring-spin"></div>
+        <img src="assets/avatar.jpg" alt="تصویر آواتار مهشید بذرافشان" class="avatar" width="700" height="700">
+      </div>
+      <div class="float-chip chip-react">⚛️ React</div>
+      <div class="float-chip chip-ts">TS TypeScript</div>
+      <div class="float-chip chip-tw">🌀 Tailwind</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="اسکرول به پایین"><span></span></a>
+</header>
+
+<main>
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="sec-kicker reveal">درباره من</p>
+    <h2 class="sec-title reveal">کد می‌نویسم، <span class="grad">تجربه کاربری</span> می‌سازم</h2>
+    <div class="about-grid">
+      <div class="about-card spotlight reveal">
+        <p>
+          دانشجوی سال چهارم علوم تربیتی دانشگاه شهید بهشتی تهران و توسعه‌دهنده فرانت‌اند از یزد.
+          مسیر یادگیریم رو ساختارمند رفتم: از HTML/CSS/JS با FreeCodeCamp تا React و TypeScript —
+          و الان روی پروژه‌های واقعی کار می‌کنم.
+        </p>
+        <p>
+          چیزی که من رو متمایز می‌کنه: هم روی <strong>سایت واقعی در حال خدمت</strong> (webjin.ir) کار کردم
+          و فرایند حرفه‌ای Git Flow و کدرفیو رو تجربه کرده‌ام، و هم نمونه‌کارهای لایو با
+          <strong>انیمیشن‌های مدرن</strong> ساختم که خودشان نشانه سطح کارم هستند.
+        </p>
+      </div>
+      <div class="about-facts">
+        <div class="fact spotlight reveal"><strong>🎓 تحصیل</strong><span>علوم تربیتی — شهید بهشتی، ترم ۴</span></div>
+        <div class="fact spotlight reveal"><strong>📍 محل</strong><span>یزد، ایران — همکاری ریموت</span></div>
+        <div class="fact spotlight reveal"><strong>💼 تجربه</strong><span>پروژه واقعی Django/React + ۳ پروژه لایو</span></div>
+        <div class="fact spotlight reveal"><strong>🗣 زبان‌ها</strong><span>فارسی (مادری) — انگلیسی (در حال تقویت)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <p class="sec-kicker reveal">مهارت‌ها</p>
+    <h2 class="sec-title reveal">تکنولوژی‌هایی که باهاشون <span class="grad">کار می‌کنم</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card spotlight reveal" data-delay="0">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>فرانت‌اند</h3>
+        <ul><li>React.js &amp; TypeScript</li><li>JavaScript (ES6+)</li><li>HTML5 &amp; CSS3</li><li>Responsive / Mobile-first</li></ul>
+        <div class="skill-bar"><i style="--w:90%"></i></div>
+      </div>
+      <div class="skill-card spotlight reveal" data-delay="100">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+        <h3>استایل &amp; انیمیشن</h3>
+        <ul><li>Tailwind CSS</li><li>Framer Motion</li><li>CSS Grid &amp; Flexbox</li><li>UI/UX مدرن و دارک‌تم</li></ul>
+        <div class="skill-bar"><i style="--w:85%"></i></div>
+      </div>
+      <div class="skill-card spotlight reveal" data-delay="200">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></div>
+        <h3>کار تیمی &amp; ابزار</h3>
+        <ul><li>Git &amp; GitHub</li><li>Pull Request / Code Review</li><li>Vite &amp; npm</li><li>GitHub Pages Deploy</li></ul>
+        <div class="skill-bar"><i style="--w:80%"></i></div>
+      </div>
+      <div class="skill-card spotlight reveal" data-delay="300">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3>آشنایی</h3>
+        <ul><li>Django Templates</li><li>Bootstrap</li><li>REST API مصرف</li><li>SEO پایه &amp; Performance</li></ul>
+        <div class="skill-bar"><i style="--w:60%"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="sec-kicker reveal">تجربه</p>
+    <h2 class="sec-title reveal">مسیر <span class="grad">کاری و یادگیری</span></h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card spotlight">
+          <span class="tl-when">۱۴۰۵ — اکنون</span>
+          <h3>توسعه‌دهنده فرانت‌اند — webjin.ir</h3>
+          <p>همکاری روی سایت واقعی در حال خدمت (Django/Bootstrap): پیاده‌سازی کامل حالت تاریک برای همه صفحات، رفع باگ نوار ناوبری هنگام اسکرول، کار با Git Flow و ارسال PR که در کدرفیو تیم ادغام شد.</p>
+          <a class="tl-link" href="https://webjin.ir" target="_blank" rel="noopener">webjin.ir ↗</a>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card spotlight">
+          <span class="tl-when">۱۴۰۴ — ۱۴۰۵</span>
+          <h3>پروژه‌های شخصی React</h3>
+          <p>ساخت سه پروژه لایو با React + TypeScript + Tailwind: فروشگاه اینترنتی با انیمیشن‌های پیشرفته، داشبورد مدیریتی و اپلیکیشن مدیریت وظایف — همه با دیپلوی روی GitHub Pages.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card spotlight">
+          <span class="tl-when">۱۴۰۳ به بعد</span>
+          <h3>مسیر یادگیری ساختارمند</h3>
+          <p>گذراندن مسیرهای FreeCodeCamp (Responsive Web Design و JavaScript Algorithms &amp; Data Structures) و تقویت مداوم زبان انگلیسی فنی.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <p class="sec-kicker reveal">نمونه‌کارها</p>
+    <h2 class="sec-title reveal">پروژه‌هایی که <span class="grad">همین الان می‌تونید ببینید</span></h2>
+    <p class="sec-sub reveal">روی هر کارت کلیک کنید — دمو لایو باز می‌شه 👆</p>
+    <div class="projects-grid">
+
+      <a href="https://m-bazrafshan-viweb.github.io/react-shop/" target="_blank" rel="noopener" class="project-card tilt reveal">
+        <div class="pc-glow"></div>
+        <div class="pc-head">
+          <h3>🛍️ فروشگاه اینترنتی — React Shop</h3>
+          <span class="pc-live">● لایو</span>
+        </div>
+        <p>سبد خرید، فیلتر و جستجو، گالری تصویر و انیمیشن‌های پیشرفته: Spotlight، Tilt سه‌بعدی، Parallax و شمارنده‌های متحرک. ریسپانسیو کامل.</p>
+        <div class="tags"><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Framer Motion</span></div>
+        <span class="pc-cta">باز کردن دمو ↗</span>
+      </a>
+
+      <a href="https://m-bazrafshan-viweb.github.io/react-dashboard/" target="_blank" rel="noopener" class="project-card tilt reveal">
+        <div class="pc-glow"></div>
+        <div class="pc-head">
+          <h3>📊 داشبورد مدیریتی</h3>
+          <span class="pc-live">● لایو</span>
+        </div>
+        <p>داشبورد تحلیلی با نمودارها، آمار و جداول — نمایش توانایی پیاده‌سازی رابط‌های داده‌محور و پیچیده با React.</p>
+        <div class="tags"><span>React</span><span>Charts</span><span>Responsive</span></div>
+        <span class="pc-cta">باز کردن دمو ↗</span>
+      </a>
+
+      <a href="https://m-bazrafshan-viweb.github.io/todo-list/" target="_blank" rel="noopener" class="project-card tilt reveal">
+        <div class="pc-glow"></div>
+        <div class="pc-head">
+          <h3>✅ مدیریت وظایف — Todo</h3>
+          <span class="pc-live">● لایو</span>
+        </div>
+        <p>اپلیکیشن فارسی مدیریت کارها با JavaScript خالص، ذخیره‌سازی محلی و رابط کاملاً ریسپانسیو — نشان‌دهنده تسلط بر اصول.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <span class="pc-cta">باز کردن دمو ↗</span>
+      </a>
+
+      <a href="https://webjin.ir" target="_blank" rel="noopener" class="project-card tilt reveal">
+        <div class="pc-glow"></div>
+        <div class="pc-head">
+          <h3>🌐 وب‌سایت Webjin</h3>
+          <span class="pc-live work">● کار واقعی</span>
+        </div>
+        <p>پروژه در حال خدمت: طراحی و پیاده‌سازی حالت تاریک کامل، رفع باگ نوار ناوبری، ارسال Pull Request و همکاری تیمی با Git Flow.</p>
+        <div class="tags"><span>Django</span><span>Bootstrap</span><span>Git/PR</span></div>
+        <span class="pc-cta">مشاهده سایت ↗</span>
+      </a>
+
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:34px">
+      <a href="https://github.com/M-Bazrafshan-viweb?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">همه مخازن در GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container narrow">
+    <p class="sec-kicker reveal">تماس</p>
+    <h2 class="sec-title reveal">بیایید با هم <span class="grad">کار کنیم</span></h2>
+    <p class="sec-sub reveal">برای پروژه فریلنسری، استخدام یا هر همکاری دیگه‌ای در خدمتم 👇</p>
+    <div class="contact-grid">
+      <a href="mailto:miss.mahshid.miss@gmail.com" class="contact-card spotlight reveal">
+        <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        <span class="c-label">ایمیل</span>
+        <span class="c-value" dir="ltr">miss.mahshid.miss@gmail.com</span>
+      </a>
+      <a href="tel:+989937351985" class="contact-card spotlight reveal">
+        <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 1 1-3-1.86 2 2 0 1 1-3-1.86a2 2 0 1 1-3-1.86 2 2 0 1 1-3-1.86A16 16 0 0 1 6.9 4.08a2 2 0 1 1 1.86-3 2 2 0 1 1 1.86 3 2 2 0 1 1 1.86 3"/></svg></span>
+        <span class="c-label">موبایل</span>
+        <span class="c-value" dir="ltr">۰۹۹۳ ۷۳۵ ۱۹۸۵</span>
+      </a>
+      <a href="https://t.me/Mahshid005" target="_blank" rel="noopener" class="contact-card spotlight reveal">
+        <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+        <span class="c-label">تلگرام</span>
+        <span class="c-value" dir="ltr">@Mahshid005</span>
+      </a>
+      <a href="https://github.com/M-Bazrafshan-viweb" target="_blank" rel="noopener" class="contact-card spotlight reveal">
+        <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+        <span class="c-label">گیت‌هاب</span>
+        <span class="c-value" dir="ltr">M-Bazrafshan-viweb</span>
+      </a>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:30px">
+      <a href="assets/resume.pdf" download class="btn btn-primary">📄 دانلود رزومه (PDF)</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p>ساخته شده با <span class="heart">❤️</span> توسط <strong>مهشید بذرافشان</strong> — ۱۴۰۵</p>
+  <p class="foot-note">تصویر آواتار با هوش مصنوعی تولید شده است 🤖</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
