@@ -22,6 +22,16 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 if (location.search.includes('r=off')) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
+/* ========== lightbox (profile image zoom) ========== */
+const lb = document.getElementById('lightbox');
+const openLb = () => { lb.classList.add('open'); document.body.classList.add('menu-open'); };
+const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('menu-open'); };
+document.querySelectorAll('[data-lightbox]').forEach(el => el.addEventListener('click', openLb));
+document.getElementById('lbClose')?.addEventListener('click', closeLb);
+lb?.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+
 /* ========== mobile nav drawer ========== */
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');

@@ -17,7 +17,10 @@
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="logo">MB<span class="logo-dot">.</span></a>
+    <button class="nav-avatar" id="navAvatar" data-lightbox aria-label="تصویر پروفایل — کلیک برای بزرگ‌نمایی">
+      <img src="assets/avatar.jpg" alt="تصویر پروفایل مهشید بذرافشان" width="560" height="560">
+      <span class="nav-ava-dot"></span>
+    </button>
     <div class="nav-links" id="navLinks">
       <a href="#about">درباره من</a>
       <a href="#skills">مهارت‌ها</a>
@@ -62,15 +65,6 @@
         <div class="stat"><span class="stat-num" data-count="12000" data-suffix="+">۰</span><span class="stat-label">کاربر نمونه‌کارها</span></div>
       </div>
     </div>
-    <div class="hero-img reveal">
-      <div class="avatar-ring">
-        <div class="avatar-ring-spin"></div>
-        <img src="assets/avatar.png" alt="تصویر پروفایل مهشید بذرافشان" class="avatar" width="800" height="800">
-      </div>
-      <div class="float-chip chip-react">⚛️ React</div>
-      <div class="float-chip chip-ts">TS TypeScript</div>
-      <div class="float-chip chip-tw">🌀 Tailwind</div>
-    </div>
   </div>
   <a href="#about" class="scroll-hint" aria-label="اسکرول به پایین"><span></span></a>
 </header>
@@ -83,6 +77,15 @@
     <h2 class="sec-title reveal">کد می‌نویسم، <span class="grad">تجربه کاربری</span> می‌سازم</h2>
     <div class="about-grid">
       <div class="about-card spotlight reveal">
+        <div class="about-head">
+          <button class="about-ava" data-lightbox aria-label="تصویر پروفایل — کلیک برای بزرگ‌نمایی">
+            <img src="assets/avatar.jpg" alt="تصویر پروفایل مهشید بذرافشان" width="560" height="560">
+          </button>
+          <div>
+            <strong>مهشید بذرافشان</strong>
+            <span>توسعه‌دهنده فرانت‌اند — یزد، ایران</span>
+          </div>
+        </div>
         <p>
           دانشجوی سال چهارم علوم تربیتی دانشگاه شهید بهشتی تهران و توسعه‌دهنده فرانت‌اند از یزد.
           مسیر یادگیریم رو ساختارمند رفتم: از HTML/CSS/JS با FreeCodeCamp تا React و TypeScript —
@@ -268,8 +271,16 @@
 
 <footer class="footer">
   <p>ساخته شده با <span class="heart">❤️</span> توسط <strong>مهشید بذرافشان</strong> — ۱۴۰۵</p>
-  <p class="foot-note">تصویر آواتار با هوش مصنوعی تولید شده است 🤖</p>
 </footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="تصویر بزرگ پروفایل">
+  <button class="lb-close" id="lbClose" aria-label="بستن">✕</button>
+  <figure class="lb-figure">
+    <img src="assets/avatar-full.jpg" alt="تصویر پروفایل مهشید بذرافشان" class="lb-img" width="700" height="700">
+    <figcaption class="lb-cap">مهشید بذرافشان — توسعه‌دهنده فرانت‌اند</figcaption>
+  </figure>
+</div>
 
 <script src="js/main.js"></script>
 </body>
