@@ -22,6 +22,22 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 if (location.search.includes('r=off')) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
+/* ========== mobile nav drawer ========== */
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  }));
+}
 
 /* ========== spotlight mouse-tracking ========== */
 document.querySelectorAll('.spotlight, .project-card').forEach(card => {

@@ -18,13 +18,18 @@
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#hero" class="logo">MB<span class="logo-dot">.</span></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#about">درباره من</a>
       <a href="#skills">مهارت‌ها</a>
       <a href="#projects">نمونه‌کارها</a>
       <a href="#contact">تماس</a>
     </div>
-    <a href="assets/resume.pdf" download class="btn btn-sm">رزومه PDF ↓</a>
+    <div class="nav-right">
+      <a href="assets/resume.pdf" download class="btn btn-sm">رزومه PDF ↓</a>
+      <button class="nav-toggle" id="navToggle" aria-label="منو" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -60,7 +65,7 @@
     <div class="hero-img reveal">
       <div class="avatar-ring">
         <div class="avatar-ring-spin"></div>
-        <img src="assets/avatar.jpg" alt="تصویر آواتار مهشید بذرافشان" class="avatar" width="700" height="700">
+        <img src="assets/avatar.png" alt="تصویر پروفایل مهشید بذرافشان" class="avatar" width="800" height="800">
       </div>
       <div class="float-chip chip-react">⚛️ React</div>
       <div class="float-chip chip-ts">TS TypeScript</div>
@@ -84,7 +89,7 @@
           و الان روی پروژه‌های واقعی کار می‌کنم.
         </p>
         <p>
-          چیزی که من رو متمایز می‌کنه: هم روی <strong>سایت واقعی در حال خدمت</strong> (webjin.ir) کار کردم
+          چیزی که من رو متمایز می‌کنه: هم روی <strong>سایت واقعی در حال خدمت</strong> کار کردم
           و فرایند حرفه‌ای Git Flow و کدرفیو رو تجربه کرده‌ام، و هم نمونه‌کارهای لایو با
           <strong>انیمیشن‌های مدرن</strong> ساختم که خودشان نشانه سطح کارم هستند.
         </p>
@@ -143,9 +148,8 @@
         <span class="tl-dot"></span>
         <div class="tl-card spotlight">
           <span class="tl-when">۱۴۰۵ — اکنون</span>
-          <h3>توسعه‌دهنده فرانت‌اند — webjin.ir</h3>
+          <h3>توسعه‌دهنده فرانت‌اند — وب‌سایت واقعی</h3>
           <p>همکاری روی سایت واقعی در حال خدمت (Django/Bootstrap): پیاده‌سازی کامل حالت تاریک برای همه صفحات، رفع باگ نوار ناوبری هنگام اسکرول، کار با Git Flow و ارسال PR که در کدرفیو تیم ادغام شد.</p>
-          <a class="tl-link" href="https://webjin.ir" target="_blank" rel="noopener">webjin.ir ↗</a>
         </div>
       </div>
       <div class="tl-item reveal">
@@ -209,16 +213,16 @@
         <span class="pc-cta">باز کردن دمو ↗</span>
       </a>
 
-      <a href="https://webjin.ir" target="_blank" rel="noopener" class="project-card tilt reveal">
+      <div class="project-card reveal">
         <div class="pc-glow"></div>
         <div class="pc-head">
-          <h3>🌐 وب‌سایت Webjin</h3>
+          <h3>🌐 وب‌سایت واقعی</h3>
           <span class="pc-live work">● کار واقعی</span>
         </div>
-        <p>پروژه در حال خدمت: طراحی و پیاده‌سازی حالت تاریک کامل، رفع باگ نوار ناوبری، ارسال Pull Request و همکاری تیمی با Git Flow.</p>
+        <p>پروژه در حال خدمت برای یک کارفرما: طراحی و پیاده‌سازی حالت تاریک کامل، رفع باگ نوار ناوبری، ارسال Pull Request و همکاری تیمی با Git Flow.</p>
         <div class="tags"><span>Django</span><span>Bootstrap</span><span>Git/PR</span></div>
-        <span class="pc-cta">مشاهده سایت ↗</span>
-      </a>
+        <span class="pc-cta muted">آدرس عمومی ندارد — شرح کار بالا</span>
+      </div>
 
     </div>
     <div class="reveal" style="text-align:center;margin-top:34px">
