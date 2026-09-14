@@ -73,7 +73,7 @@ h1,h2,h3{line-height:1.45;font-weight:800}
 .grid-overlay{position:absolute;inset:0;
   background-image:linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px);
   background-size:44px 44px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 75%)}
-.hero-content{width:min(1180px,92%);margin-inline:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;text-align:start}
+.hero-content{width:min(1180px,92%);margin-inline:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center;position:relative;text-align:start}
 .hero-badge{display:inline-block;background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.3);color:#5eead4;padding:6px 16px;border-radius:99px;font-size:13.5px;margin-bottom:18px}
 .hero-title{font-size:clamp(38px,5.6vw,64px);font-weight:900}
 .hero-title .line{display:block;overflow:hidden;padding-block:2px}
@@ -89,16 +89,16 @@ h1,h2,h3{line-height:1.45;font-weight:800}
 .hero-text{width:100%}
 
 /* code card */
-.hero-visual{position:relative;justify-self:center;width:min(540px,100%);z-index:2}
+.hero-visual{position:relative;justify-self:stretch;display:flex;align-items:center;z-index:2}
 .code-card{
   position:relative;direction:ltr;text-align:left;border-radius:16px;overflow:hidden;
+  width:100%;max-width:500px;margin-inline:auto;
   background:linear-gradient(180deg,rgba(13,21,38,.92),rgba(10,16,30,.96));
   border:1px solid rgba(20,184,166,.28);
   box-shadow:0 30px 80px rgba(2,10,20,.7), 0 0 0 4px rgba(20,184,166,.05);
-  transform:rotate(-2deg);
-  animation:codeIn 1s var(--ease) .25s backwards;
+  animation:codeIn .9s var(--ease) .25s backwards;
 }
-@keyframes codeIn{from{opacity:0;transform:rotate(-2deg) translateY(36px)}to{opacity:1;transform:rotate(-2deg) translateY(0)}}
+@keyframes codeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 .cc-bar{display:flex;align-items:center;gap:8px;padding:12px 15px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}
 .cc-dot{width:12px;height:12px;border-radius:50%}
 .cc-r{background:#ff5f57}.cc-y{background:#febc2e}.cc-g{background:#28c840}
