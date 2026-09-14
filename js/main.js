@@ -24,8 +24,8 @@ if (location.search.includes('r=off')) {
 }
 /* ========== lightbox (profile image zoom) ========== */
 const lb = document.getElementById('lightbox');
-const openLb = () => { lb.classList.add('open'); document.body.classList.add('menu-open'); };
-const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('menu-open'); };
+const openLb = () => { lb.classList.add('open'); document.body.classList.add('menu-open'); document.documentElement.classList.add('menu-open'); };
+const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('menu-open'); document.documentElement.classList.remove('menu-open'); };
 document.querySelectorAll('[data-lightbox]').forEach(el => el.addEventListener('click', openLb));
 document.getElementById('lbClose')?.addEventListener('click', closeLb);
 lb?.addEventListener('click', e => { if (e.target === lb) closeLb(); });
@@ -35,20 +35,37 @@ addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
 /* ========== mobile nav drawer ========== */
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const isMobileNav = () => matchMedia('(max-width:900px)').matches;
+const setMenu = on => {
+  navLinks.classList.toggle('open', on);
+  navToggle.classList.toggle('open', on);
+  document.body.classList.toggle('menu-open', on);
+  document.documentElement.classList.toggle('menu-open', on);
+  navToggle.setAttribute('aria-expanded', on);
+};
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open', open);
-    document.body.classList.toggle('menu-open', open);
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-    document.body.classList.remove('menu-open');
+  navToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+  /* tap dark backdrop (not a link) → close */
+  navLinks.addEventListener('click', e => { if (e.target === navLinks) setMenu(false); });
+  /* link → close menu first, then scroll AFTER the lock is released.
+     (scrolling while body is overflow:hidden freezes the page on Android) */
+  let scrollT;
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id && id.startsWith('#') && isMobileNav()) {
+      e.preventDefault();
+      setMenu(false);
+      const target = document.querySelector(id);
+      clearTimeout(scrollT);
+      scrollT = setTimeout(() => {
+        target?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+        history.replaceState(null, '', id);
+      }, 120);
+    } else { setMenu(false); }
   }));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  addEventListener('resize', () => { if (!isMobileNav()) setMenu(false); });
 }
-
 /* ========== spotlight mouse-tracking ========== */
 document.querySelectorAll('.spotlight, .project-card').forEach(card => {
   card.addEventListener('mousemove', e => {
